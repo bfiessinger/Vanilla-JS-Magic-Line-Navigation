@@ -28,8 +28,8 @@ myMagicLine.init();
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
 
 ## Options
-| Option            | Value         |                                               | Default         |
-| -------------     |:-------------:|:---------------------------------------------:|:---------------:|
+| Option            | Value                                                         | Default         |
+| ----------------- |:-------------------------------------------------------------:|:---------------:|
 | navElements       | a query Selector, you can even define multiple like 'a, span' | 'a'             |
 | mode              | might be either 'line' or 'pill'                              | 'line'          |
 | lineStrength      | thickness of your line in px                                  | 2               |
