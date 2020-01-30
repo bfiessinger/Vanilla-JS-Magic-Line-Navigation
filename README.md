@@ -24,5 +24,5 @@ var myMagicLine = new magicLine(
 );
 myMagicLine.init();
 ```
-<strong>Screenshot</strong><br>
+<strong>This is how it looks like:</strong><br><br>
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
