@@ -24,3 +24,5 @@ var myMagicLine = new magicLine(
 );
 myMagicLine.init();
 ```
+<strong>Screenshot</strong>
+![Screenshot](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
