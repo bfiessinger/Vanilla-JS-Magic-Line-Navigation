@@ -25,4 +25,4 @@ var myMagicLine = new magicLine(
 myMagicLine.init();
 ```
 <strong>Screenshot</strong>
-(https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
+![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
