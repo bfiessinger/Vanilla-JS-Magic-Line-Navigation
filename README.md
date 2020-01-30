@@ -29,7 +29,7 @@ myMagicLine.init();
 
 ## Options
 | Option            | Value                                                         | Default         |
-| ----------------- |:-------------------------------------------------------------:|:---------------:|
+| ----------------- |---------------------------------------------------------------|-----------------|
 | navElements       | a query Selector, you can even define multiple like 'a, span' | 'a'             |
 | mode              | might be either 'line' or 'pill'                              | 'line'          |
 | lineStrength      | thickness of your line in px                                  | 2               |
