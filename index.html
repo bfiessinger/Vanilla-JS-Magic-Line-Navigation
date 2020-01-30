@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    /* Required styling */
+    .init-floating-line,
+    .floating-line-inner {
+      position: relative;
+    }
+
+    .floating-line {
+      z-index: -1;
+      position: absolute;
+    }
+
+    .floating-line-css-transition {
+      transition: all .2s ease-in-out;
+    }
+
+    /* DEMO STYLES */
+    body {
+      font-family: 'Oxygen', sans-serif;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(90deg, rgba(0, 210, 255, .4) 0%, rgba(58, 71, 213, .4) 100%);
+    }
+
+    .wrapper {
+      width: 1200px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .floating-line-menu,
+    .floating-line-menu-pill,
+    .floating-line-inner,
+    .floating-line-inner ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .floating-line-inner ul {
+      list-style: none;
+    }
+
+    .floating-line-menu a,
+    .floating-line-menu-pill a {
+      font-weight: 700;
+      color: #182848;
+      cursor: pointer;
+      text-align: center;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    .floating-line {
+      border-radius: 4px;
+      background: #FFF;
+      box-shadow: 0 0 10px rgba(90, 129, 177, 0.6);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <nav class="floating-line-menu-pill">
+      <a>Menu</a>
+      <a>Links</a>
+      <a class="active">are</a>
+      <a>awesome</a>
+    </nav>
+
+    <nav class="floating-line-menu">
+      <ul>
+        <li>
+          <a>There's</a>
+        </li>
+        <li>
+          <a>also</a>
+        </li>
+        <li>
+          <a>an</a>
+        </li>
+        <li>
+          <a>undlerline</a>
+        </li>
+        <li>
+          <a>option</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="dist/js/magicline.js"></script>
+
+  <script>
+
+    var myMagicPill = new magicLine(
+      document.querySelectorAll('.floating-line-menu-pill'),
+      {
+        mode: 'pill',
+        animationCallback: function (el, params) {
+          anime({
+            targets: el,
+            left: params.left,
+            top: params.top,
+            width: params.width,
+            height: params.height
+          });
+        }
+      }
+    );
+    myMagicPill.init();
+
+    var myMagicLine = new magicLine(
+      document.querySelectorAll('.floating-line-menu'),
+      {
+        mode: 'line',
+        animationCallback: function (el, params) {
+          anime({
+            targets: el,
+            left: params.left,
+            top: params.top,
+            width: params.width,
+            height: params.height
+          });
+        }
+      }
+    );
+    myMagicLine.init();
+
+  </script>
+
+</body>
+
+</html>

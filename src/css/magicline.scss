@@ -1,0 +1,5 @@
+/* Required Styling */
+.init-floating-line, .floating-line-inner { position: relative; }
+.floating-line-inner { z-index: 1; }
+.floating-line { position: absolute; }
+.floating-line-css-transition { transition: all .2s ease-in-out; }

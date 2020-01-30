@@ -1,0 +1,21 @@
+{
+  "name": "vanilla-magicline",
+  "version": "1.0.0",
+  "description": "Vanilla JS Magic Line for nav Menus",
+  "main": "app.js",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "author": "Bastian Fießinger",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "rollup": "^1.30.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}
