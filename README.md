@@ -26,3 +26,5 @@ myMagicLine.init();
 ```
 ## This is how it looks like:
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
+
+Check out the [Demo](https://codepen.io/bastian_fiessinger/pen/MWYMWJN) on Codepen
