@@ -27,4 +27,14 @@ myMagicLine.init();
 ## This is how it looks like:
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
 
+## Options
+| Option            | Value         |                                               | Default         |
+| -------------     |:-------------:|:---------------------------------------------:|:---------------:|
+| navElements       | a query Selector, you can even define multiple like 'a, span' | 'a'             |
+| mode              | might be either 'line' or 'pill'                              | 'line'          |
+| lineStrength      | thickness of your line in px                                  | 2               |
+| lineClass         | The classname of the floating-line element                    | 'floating-line' |
+| wrapper           | DOMNode to be inserted as a wrapper                           | 'div'           |
+| animationCallback | a callBack Function used for animation                        | null            |
+
 Check out the [Demo](https://codepen.io/bastian_fiessinger/pen/MWYMWJN) on Codepen
