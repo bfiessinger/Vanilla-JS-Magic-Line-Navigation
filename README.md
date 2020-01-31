@@ -8,6 +8,10 @@ original idea: https://css-tricks.com/jquery-magicline-navigation/
 
 To get IE Support below Version 10 (or any other browser that does not support Element.Classlist) use a Classlist Polyfill. 
 
+## Dependencies
+* None
+However you can implement every Animation Library like anime.js for the animations.
+
 ## Usage
 ```javascript
 var myMagicLine = new magicLine(
