@@ -24,7 +24,7 @@ export default class magicLine {
       navElements: 'a',
       mode: 'line',
       lineStrength: 2,
-      lineClass: 'floating-line',
+      lineClass: 'magic-line',
       wrapper: 'div',
       animationCallback: null
     };
@@ -125,19 +125,19 @@ export default class magicLine {
 
       Array.prototype.forEach.call(this.elements, (el) => {
 
-        el.classList.add('init-floating-line', 'floating-line-mode-' + this.settings.mode.toLowerCase());
+        el.classList.add('init-magic-line', 'magic-line-mode-' + this.settings.mode.toLowerCase());
 
         // Build an Element Wrapper
         let linkWrapper = document.createElement(this.settings.wrapper);
-        linkWrapper.className = 'floating-line-inner';
+        linkWrapper.className = 'magic-line-inner';
 
         // Create the Line Element
-        let floatingLineEl = document.createElement('div');
-        floatingLineEl.className = this.settings.lineClass;
+        let magicLineEl = document.createElement('div');
+        magicLineEl.className = this.settings.lineClass;
         if (this.settings.animationCallback === null) {
-          floatingLineEl.classList.add('floating-line-css-transition');
+          magicLineEl.classList.add('magic-line-css-transition');
         }
-        el.appendChild(floatingLineEl);
+        el.appendChild(magicLineEl);
 
         // Wrap all Child Elements
         while (el.firstChild) {
@@ -150,7 +150,7 @@ export default class magicLine {
         let initActive = getActiveElement(getNavElements(el));
 
         // Draw
-        drawLine(floatingLineEl, initActive, true);
+        drawLine(magicLineEl, initActive, true);
 
       });
 
@@ -162,7 +162,7 @@ export default class magicLine {
 
         let lineSelector = '.' + this.settings.lineClass;
         let lineEl = el.querySelector(lineSelector);
-        let linkWrapper = el.querySelector('.floating-line-inner');
+        let linkWrapper = el.querySelector('.magic-line-inner');
         let links = getNavElements(linkWrapper);
 
         Array.prototype.forEach.call(links, (link) => {

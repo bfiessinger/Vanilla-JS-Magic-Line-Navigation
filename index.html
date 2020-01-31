@@ -12,17 +12,17 @@
 
   <style type="text/css">
     /* Required styling */
-    .init-floating-line,
-    .floating-line-inner {
+    .init-magic-line,
+    .magic-line-inner {
       position: relative;
     }
 
-    .floating-line {
+    .magic-line {
       z-index: -1;
       position: absolute;
     }
 
-    .floating-line-css-transition {
+    .magic-line-css-transition {
       transition: all .2s ease-in-out;
     }
 
@@ -41,21 +41,21 @@
       margin: 0 auto;
     }
 
-    .floating-line-menu,
-    .floating-line-menu-pill,
-    .floating-line-inner,
-    .floating-line-inner ul {
+    .magic-line-menu,
+    .magic-line-menu-pill,
+    .magic-line-inner,
+    .magic-line-inner ul {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
 
-    .floating-line-inner ul {
+    .magic-line-inner ul {
       list-style: none;
     }
 
-    .floating-line-menu a,
-    .floating-line-menu-pill a {
+    .magic-line-menu a,
+    .magic-line-menu-pill a {
       font-weight: 700;
       color: #182848;
       cursor: pointer;
@@ -64,7 +64,7 @@
       display: block;
     }
 
-    .floating-line {
+    .magic-line {
       border-radius: 4px;
       background: #FFF;
       box-shadow: 0 0 10px rgba(90, 129, 177, 0.6);
@@ -77,14 +77,14 @@
 
   <div class="wrapper">
 
-    <nav class="floating-line-menu-pill">
+    <nav class="magic-line-menu-pill">
       <a>Menu</a>
       <a>Links</a>
       <a class="active">are</a>
       <a>awesome</a>
     </nav>
 
-    <nav class="floating-line-menu">
+    <nav class="magic-line-menu">
       <ul>
         <li>
           <a>There's</a>
@@ -96,7 +96,7 @@
           <a>an</a>
         </li>
         <li>
-          <a>undlerline</a>
+          <a>underline</a>
         </li>
         <li>
           <a>option</a>
@@ -112,7 +112,7 @@
   <script>
 
     var myMagicPill = new magicLine(
-      document.querySelectorAll('.floating-line-menu-pill'),
+      document.querySelectorAll('.magic-line-menu-pill'),
       {
         mode: 'pill',
         animationCallback: function (el, params) {
@@ -129,7 +129,7 @@
     myMagicPill.init();
 
     var myMagicLine = new magicLine(
-      document.querySelectorAll('.floating-line-menu'),
+      document.querySelectorAll('.magic-line-menu'),
       {
         mode: 'line',
         animationCallback: function (el, params) {

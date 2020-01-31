@@ -38,7 +38,7 @@ var magicLine = (function () {
       navElements: 'a',
       mode: 'line',
       lineStrength: 2,
-      lineClass: 'floating-line',
+      lineClass: 'magic-line',
       wrapper: 'div',
       animationCallback: null
     };
@@ -140,19 +140,19 @@ var magicLine = (function () {
 
     var onLoad = function onLoad() {
       Array.prototype.forEach.call(_this.elements, function (el) {
-        el.classList.add('init-floating-line', 'floating-line-mode-' + _this.settings.mode.toLowerCase()); // Build an Element Wrapper
+        el.classList.add('init-magic-line', 'magic-line-mode-' + _this.settings.mode.toLowerCase()); // Build an Element Wrapper
 
         var linkWrapper = document.createElement(_this.settings.wrapper);
-        linkWrapper.className = 'floating-line-inner'; // Create the Line Element
+        linkWrapper.className = 'magic-line-inner'; // Create the Line Element
 
-        var floatingLineEl = document.createElement('div');
-        floatingLineEl.className = _this.settings.lineClass;
+        var magicLineEl = document.createElement('div');
+        magicLineEl.className = _this.settings.lineClass;
 
         if (_this.settings.animationCallback === null) {
-          floatingLineEl.classList.add('floating-line-css-transition');
+          magicLineEl.classList.add('magic-line-css-transition');
         }
 
-        el.appendChild(floatingLineEl); // Wrap all Child Elements
+        el.appendChild(magicLineEl); // Wrap all Child Elements
 
         while (el.firstChild) {
           linkWrapper.appendChild(el.firstChild);
@@ -162,7 +162,7 @@ var magicLine = (function () {
         el.appendChild(linkWrapper);
         var initActive = getActiveElement(getNavElements(el)); // Draw
 
-        drawLine(floatingLineEl, initActive, true);
+        drawLine(magicLineEl, initActive, true);
       });
     };
 
@@ -170,7 +170,7 @@ var magicLine = (function () {
       Array.prototype.forEach.call(_this.elements, function (el) {
         var lineSelector = '.' + _this.settings.lineClass;
         var lineEl = el.querySelector(lineSelector);
-        var linkWrapper = el.querySelector('.floating-line-inner');
+        var linkWrapper = el.querySelector('.magic-line-inner');
         var links = getNavElements(linkWrapper);
         Array.prototype.forEach.call(links, function (link) {
           link.addEventListener('click', setActiveElement.bind(null, links));
