@@ -9,7 +9,7 @@ var myMagicLine = new magicLine(
     navElements: 'a',                           // navigation element selector
     mode: 'line',                               // line or pill
     lineStrength: 2,                            // Thickness of the line
-    lineClass: 'floating-line',                 // Classname to add to the line element
+    lineClass: 'magic-line',                    // Classname to add to the line element
     wrapper: 'div',                             // the node that's being created as an element wrapper
     animationCallback: function (el, params) {  // might be either null or a callback function
       animationLibrary({
@@ -33,8 +33,8 @@ myMagicLine.init();
 | navElements       | a query Selector, you can even define multiple like 'a, span' | 'a'             |
 | mode              | might be either 'line' or 'pill'                              | 'line'          |
 | lineStrength      | thickness of your line in px                                  | 2               |
-| lineClass         | The classname of the floating-line element                    | 'floating-line' |
+| lineClass         | The classname of the floating-line element                    | 'magic-line'    |
 | wrapper           | DOMNode to be inserted as a wrapper                           | 'div'           |
 | animationCallback | a callBack Function used for animation                        | null            |
 
-Check out the [Demo](https://codepen.io/bastian_fiessinger/pen/MWYMWJN) on Codepen
+Check out the [Demo](https://codepen.io/bastian_fiessinger/full/MWYMWJN) on Codepen
