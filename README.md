@@ -1,7 +1,7 @@
 # Vanilla JS - Magic Line Navigation
 original idea: https://css-tricks.com/jquery-magicline-navigation/
 
-## Usage:
+## Usage
 ```javascript
 var myMagicLine = new magicLine(
   document.querySelectorAll('.floating-line-menu'),
@@ -24,7 +24,7 @@ var myMagicLine = new magicLine(
 );
 myMagicLine.init();
 ```
-## This is how it looks like:
+## This is how it looks like
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
 
 ## Options
