@@ -31,8 +31,6 @@ var myMagicLine = new magicLine(
 );
 myMagicLine.init();
 ```
-## This is how it looks like
-![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
 
 ## Options
 | Option            | Value                                                         | Default         |
@@ -43,5 +41,8 @@ myMagicLine.init();
 | lineClass         | The classname of the floating-line element                    | 'magic-line'    |
 | wrapper           | DOMNode to be inserted as a wrapper                           | 'div'           |
 | animationCallback | a callBack Function used for animation                        | null            |
+
+## This is how it looks like
+![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
 
 Check out the [Demo](https://codepen.io/bastian_fiessinger/full/MWYMWJN) on Codepen
