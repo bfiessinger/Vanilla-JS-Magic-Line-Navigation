@@ -10,6 +10,7 @@ To get IE Support below Version 10 (or any other browser that does not support E
 
 ## Dependencies
 * None
+
 However you can implement every Animation Library like anime.js for the animations.
 
 ## Usage
