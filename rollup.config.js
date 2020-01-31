@@ -12,7 +12,7 @@ export default [{
     banner: '/**\n\
  * Vanilla JS Magic Line Navigation\n\
  * Author: Bastian Fießinger\n\
- * Version: 1.0.0\n\
+ * Version: 1.0.1\n\
  */'
   },
   plugins: [
