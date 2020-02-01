@@ -50,4 +50,6 @@ myMagicLine.init();
 ## This is how it looks like
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/basticodes/vanilla-js-magic-line-navigation/badge)](https://www.codefactor.io/repository/github/basticodes/vanilla-js-magic-line-navigation)
+
 Check out the [Demo](https://codepen.io/bastian_fiessinger/full/MWYMWJN) on Codepen
