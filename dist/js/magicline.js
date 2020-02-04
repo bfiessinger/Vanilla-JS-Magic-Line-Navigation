@@ -85,7 +85,16 @@ var magicLine = (function () {
 
         return null;
       });
-      active = !active.length ? elements[0] : active[0];
+
+      if (!active.length) {
+        active = elements[0];
+        setActiveElement(elements, {
+          target: elements[0]
+        });
+      } else {
+        active = active[0];
+      }
+
       return {
         el: active,
         rect: active.getBoundingClientRect()
