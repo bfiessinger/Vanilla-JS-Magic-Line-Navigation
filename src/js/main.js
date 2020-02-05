@@ -6,6 +6,11 @@ export default class magicLine {
 
     this.elements;
 
+    /**
+     * Basic Helper function to check if an Element is an instance of Node
+     * @param {any} domNode either a dom node or querySelector
+     * @returns {boolean} either true or false
+     */
     function isDomElement(domNode) {
       if (domNode instanceof Node || domNode instanceof NodeList || domNode instanceof HTMLCollection) {
         return true;
@@ -13,13 +18,18 @@ export default class magicLine {
       return false;
     }
 
+    /**
+     * Check this.elements and declare them based on their value
+     */
     if (isDomElement(node)) {
       this.elements = node;
     } else {
       this.elements = document.querySelectorAll(node);
     }
 
-    // Build Defaults Object
+    /**
+     * Build Default Settings Object
+     */
     const defaults = {
       navElements: 'a',
       mode: 'line',
@@ -29,6 +39,11 @@ export default class magicLine {
       animationCallback: null
     };
 
+    /**
+     * Basic Helper Function to merge user defined settings with the defaults Object
+     * @param  {...any} args Arguments to check
+     * @returns {object} Merged Settings Object
+     */
     const extendSettings = (...args) => {
       var merged = {};
       Array.prototype.forEach.call(args, (obj) => {
@@ -42,12 +57,24 @@ export default class magicLine {
       return merged;
     };
 
+    /**
+     * Build the final Settings Object
+     */
     this.settings = extendSettings(defaults, settings || {});
 
-    // Get all Nav Elements
+    /**
+     * Get all Nav Elements
+     * @param {object} parent A parentNode of all Nav Elements
+     * @returns {object} All Navigation Elements
+     */
     const getNavElements = (parent) => parent.querySelectorAll(this.settings.navElements);
 
-    // Set the active Element
+    /**
+     * Set the active Element
+     * @param {object} links All available Nav Elements
+     * @param {object} event the event object
+     * @returns {null} NULL
+     */
     const setActiveElement = (links, event) => {
       Array.prototype.forEach.call(links, (el) => {
         el.classList.remove('active');
@@ -55,7 +82,12 @@ export default class magicLine {
       event.target.classList.add('active');
     };
 
-    // get the current active Element
+    /**
+     * Get the currently active Element
+     * @param {object} elements All available Nav Elements
+     * @uses setActiveElement
+     * @returns {object} The currently active Nav Element
+     */
     const getActiveElement = (elements) => {
 
       let active = Array.prototype.filter.call(elements, (el) => {
@@ -81,7 +113,13 @@ export default class magicLine {
 
     };
 
-    // Move Line
+    /**
+     * Move Line
+     * @param {object} lineEl The Magic Line Element
+     * @param {object} event The Event Object
+     * @uses drawLine
+     * @returns {null} NULL
+     */
     const moveLine = (lineEl, event) => {
       const curEl = event.target;
       const cur = {
@@ -91,13 +129,26 @@ export default class magicLine {
       drawLine(lineEl, cur);
     };
 
-    // Reset Line
+    /**
+     * Reset Line
+     * @param {object} lineEl The Magic Line Element
+     * @param {object} links All available Nav Elements
+     * @uses drawLine
+     * @returns {null} NULL
+     */
     const resetLine = (lineEl, links) => {
       const active = getActiveElement(links);
       drawLine(lineEl, active);
     };
 
-    // Draw Line
+
+    /**
+     * Draw Line
+     * @param {object} line The Magic Line Element
+     * @param {object} active The currently active Nav Element
+     * @param {boolean} init Does the function run on Initialisation?
+     * @returns {null} NULL
+     */
     const drawLine = (line, active, init) => {
 
       let lineLeft = active.el.offsetLeft;
@@ -128,6 +179,10 @@ export default class magicLine {
       }
     };
 
+    /**
+     * Create all neccessary MagicLine Elements on Load
+     * @returns {null} NULL
+     */
     const onLoad = () => {
 
       Array.prototype.forEach.call(this.elements, (el) => {
@@ -163,6 +218,10 @@ export default class magicLine {
 
     };
 
+    /**
+     * Bind Event Listeners
+     * @returns {null} NULL
+     */
     const BindEvents = () => {
 
       Array.prototype.forEach.call(this.elements, (el) => {
@@ -184,7 +243,10 @@ export default class magicLine {
 
     };
 
-    // Initiate
+    /**
+     * Init MagicLine
+     * @returns {null} NULL
+     */
     this.init = function () {
 
       // Set init states
