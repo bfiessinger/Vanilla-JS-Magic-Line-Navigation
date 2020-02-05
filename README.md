@@ -16,17 +16,17 @@ To get IE Support below Version 10 (or any other browser that does not support E
 
 However you can implement every Animation Library like anime.js for the animations.
 
-## Filesize
-* Minified Version:
-  * 2.58 KB (1.07 KB gzipped)
-
-* Non Minified Version
-  * 7.49 KB (2.12 KB gzipped)
+## Features:
+* works with any animation Library like [anime.js](https://github.com/juliangarnier/anime), [velocity.js](https://github.com/julianshapiro/velocity), [GSAP](https://github.com/greensock/GSAP), e.g.
+* works with CSS Transitions (no animation library required)
+* fully responsive
+* able to animate in any direction (left to right, top to bottom, diagonal)
+* pillmode & linemode
 
 ## Usage
 ```javascript
 var myMagicLine = new magicLine(
-  document.querySelectorAll('.floating-line-menu'),
+  document.querySelectorAll('.magic-line-menu'),
   {
     navElements: 'a',                           // navigation element selector
     mode: 'line',                               // line or pill
@@ -47,6 +47,41 @@ var myMagicLine = new magicLine(
 myMagicLine.init();
 ```
 
+## Basic Setup
+### HTML
+The most basic html structure to use is shown below:
+```html
+<nav class="my-magic-line">
+  <a>Magic</a>
+  <a>Line</a>
+  <a class="active">is</a>
+  <a>awesome</a>
+</nav>
+```
+### CSS
+Required styling
+```css
+.init-magic-line,
+.magic-line-inner {
+  position: relative;
+}
+
+.magic-line {
+  z-index: -1;
+  position: absolute;
+}
+
+.magic-line-css-transition {
+  transition: all .2s ease-in-out;
+}
+```
+
+### Javascript
+```javascript
+var myMagicLine = new new magicLine(document.querySelectorAll('.my-magic-line'));
+myMagicLine.init();
+```
+
 ## Options
 | Option            | Value                                                         | Default         |
 | ----------------- |---------------------------------------------------------------|-----------------|
@@ -59,5 +94,12 @@ myMagicLine.init();
 
 ## This is how it looks like
 ![Alt text](https://raw.githubusercontent.com/basticodes/Vanilla-JS-Magic-Line-Navigation/master/demo/screenshot.PNG)
+
+## Filesize
+* Minified Version:
+  * 2.58 KB (1.07 KB gzipped)
+
+* Non Minified Version
+  * 7.49 KB (2.12 KB gzipped)
 
 Check out the [Demo](https://codepen.io/bastian_fiessinger/full/MWYMWJN) on Codepen
