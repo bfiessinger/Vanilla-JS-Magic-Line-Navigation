@@ -78,7 +78,7 @@ Required styling
 
 ### Javascript
 ```javascript
-var myMagicLine = new new magicLine(document.querySelectorAll('.my-magic-line'));
+var myMagicLine = new new magicLine('.my-magic-line');
 myMagicLine.init();
 ```
 
