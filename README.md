@@ -102,4 +102,5 @@ myMagicLine.init();
 * Non Minified Version
   * 7.49 KB (2.12 KB gzipped)
 
+## DEMO
 Check out the [Demo](https://codepen.io/bastian_fiessinger/full/MWYMWJN) on Codepen
