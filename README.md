@@ -1,7 +1,7 @@
 # Vanilla JS - Magic Line Navigation
 original idea: https://css-tricks.com/jquery-magicline-navigation/
 
-[![CodeFactor](https://www.codefactor.io/repository/github/basticodes/vanilla-js-magic-line-navigation/badge)](https://www.codefactor.io/repository/github/basticodes/vanilla-js-magic-line-navigation)
+[![CodeFactor](https://www.codefactor.io/repository/github/bfiessinger/vanilla-js-magic-line-navigation/badge)](https://www.codefactor.io/repository/github/bfiessinger/vanilla-js-magic-line-navigation)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Browser Support
