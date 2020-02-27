@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.4
+* Fixed a bug where the animation would not work properly if the Nav Elements Selector has child Elements
+
 ### 1.0.3
 * Improve all comments to make them better understandable
 * replaced 'rollup-plugin-uglify' with 'rollup-plugin-terser' for minification

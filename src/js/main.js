@@ -62,6 +62,32 @@ export default class magicLine {
      */
     this.settings = extendSettings(defaults, settings || {});
 
+		/**
+		 * Helper function to determine if an element matches a selector
+		 * @param {HTMLElement} el The HTMLElement to be checked
+		 * @param {string} selector selector
+		 * @returns {boolean} true or false
+		 */
+		const elementMatches = (el, selector) => {
+			if ((el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector).call(el, selector)) {
+				return true;
+			}
+			return false;
+		};
+
+		/**
+		 * Recursive function to get the closest ancestor by
+		 * @param {HTMLElement} el Source Element
+		 * @param {*} selector parentselector
+		 * @returns {HTMLElement} Parent Element
+		 */
+		function findAncestor (el, selector) {
+			while ((el = el.parentElement) && !(el.matches || el.matchesSelector).call(el, selector)) {
+				continue;
+			}
+			return el;
+		}
+
     /**
      * Get all Nav Elements
      * @param {object} parent A parentNode of all Nav Elements
@@ -121,7 +147,11 @@ export default class magicLine {
      * @returns {null} NULL
      */
     const moveLine = (lineEl, event) => {
-      const curEl = event.target;
+			let curEl = event.target;
+			if (!elementMatches(curEl, this.settings.navElements)) {
+				curEl = findAncestor(curEl, this.settings.navElements);
+			}
+
       const cur = {
         el: curEl,
         rect: curEl.getBoundingClientRect()

@@ -1,8 +1,8 @@
 {
   "name": "vanilla-magicline",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Vanilla JS Magic Line for nav Menus",
-  "main": "app.js",
+  "main": "src/js/main.js",
   "scripts": {
     "build": "rollup --config"
   },
