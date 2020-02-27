@@ -130,7 +130,13 @@ var magicLine = (function() {
         Array.prototype.forEach.call(links, el => {
           el.classList.remove("active");
         });
-        event.target.classList.add("active");
+        let curEl = event.target;
+
+        if (!elementMatches(curEl, this.settings.navElements)) {
+          curEl = findAncestor(curEl, this.settings.navElements);
+        }
+
+        curEl.classList.add("active");
       };
       /**
        * Get the currently active Element
