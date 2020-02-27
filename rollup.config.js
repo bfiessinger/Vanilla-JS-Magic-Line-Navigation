@@ -7,7 +7,7 @@ const prettier = require('rollup-plugin-prettier');
 const banner = '/**\n\
 * Vanilla JS Magic Line Navigation\n\
 * Author: Bastian Fießinger\n\
-* Version: 1.0.3\n\
+* Version: 1.0.4\n\
 */';
 
 // Default

@@ -1,7 +1,7 @@
 /**
  * Vanilla JS Magic Line Navigation
  * Author: Bastian Fießinger
- * Version: 1.0.3
+ * Version: 1.0.4
  */
 var magicLine = (function() {
   "use strict";
